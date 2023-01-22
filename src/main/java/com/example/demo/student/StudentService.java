@@ -7,17 +7,20 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-
+// It is also used at class level.
+// It tells the Spring that class contains the business logic.
 @Service
 public class StudentService {
 
     private final StudentRepository studentRepository;
-
+//  Spring provides annotation-based auto-wiring by providing @Autowired annotation.
+//  It is used to autowire spring bean on setter methods, instance variable, and constructor.
     @Autowired
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
-
+    //  Spring provides annotation-based auto-wiring by providing @Autowired annotation.
+    //  It is used to autowire spring bean on setter methods, instance variable, and constructor.
     @Autowired
     public List<Student> getStudents(){
         return studentRepository.findAll();

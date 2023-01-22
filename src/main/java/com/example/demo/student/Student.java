@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.Period;
-
+// The object that will be persistent in the database is called Entity.
 @Entity
 @Table
 public class Student {

@@ -8,9 +8,12 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+//  It is a class-level annotation.
+//  The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
 @Configuration
 public class StudentConfig {
-
+//  It is a method-level annotation. It is an alternative of XML <bean> tag.
+//  It tells the method to produce a bean to be managed by Spring Container.
     @Bean
     CommandLineRunner commandLineRunner(
             StudentRepository repository){

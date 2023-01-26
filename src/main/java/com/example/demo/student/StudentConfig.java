@@ -14,6 +14,8 @@ import java.util.List;
 public class StudentConfig {
 //  It is a method-level annotation. It is an alternative of XML <bean> tag.
 //  It tells the method to produce a bean to be managed by Spring Container.
+
+    // Beanler resuable(yeniden kullanılabilir) yazılım bileşinidir.
     @Bean
     CommandLineRunner commandLineRunner(
             StudentRepository repository){

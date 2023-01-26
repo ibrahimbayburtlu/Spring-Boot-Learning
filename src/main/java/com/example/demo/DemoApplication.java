@@ -1,15 +1,10 @@
 package com.example.demo;
 
-import com.example.demo.student.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.List;
-
+// RestController => @Controller ve @ResponseBody birleşiminden oluşur. Datanın kendisini JSON veya XML formatı ile direkt olarak sunabiliyor.
 @SpringBootApplication
 @RestController
 public class DemoApplication {

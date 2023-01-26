@@ -42,7 +42,7 @@ public class StudentService {
         }
         studentRepository.deleteById(studentId);
     }
-
+    // Spring Transactions, bir runtime exception durumunda işlemleri en başa almamızı sağlayan güçlü ve verş tutarlığı saglar.
     @Transactional
     public void updateStudent(Long studentId, String name, String email) {
         Student student = studentRepository.findById(studentId).

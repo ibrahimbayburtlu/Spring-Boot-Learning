@@ -6,12 +6,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 //  It can be considered as a combination of @Controller and @ResponseBody annotations
+// @Controller => Gelen isteğe göre genellikle model içersinde yer alan verileri kullanarak işlem yapan ve sonucu view katmanına ileten bölümdür.
+// @ResponseBody => Java Nesnesini Json'a çevirir.
 @RestController
 //  It is used to map the web requests.
+// @RequestMapping anotosyonu / appointments gibi URL'lerin bir sınıf veya metod tarafından map edilmesini sağlar.
+// Sınıf üzeribde kullanıldığı zaman, o sınıfın belirtilen URL ile ilgili tüm işlemleri yapmasını sağlar.
 @RequestMapping(path = "api/v1/student")
 public class StudentController {
     private final StudentService studentService;
-    //  Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor
+    //  @Autowired anotosyonu sayesinde bir bean içerisindeki değerleri başka beanın içerisinde enjekte değerleri koruyarak kullanabailiriz.
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
